@@ -1,39 +1,43 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//     const chatMessages = document.getElementById("chat-messages");
-//     const userInput = document.getElementById("user-input");
-//     const messageForm = document.getElementById("message-form");
+const chatContainer = document.querySelector(".chat-container");
+const userInput = document.getElementById("user-input");
+const sendButton = document.getElementById("send-button");
 
-//     messageForm.addEventListener("submit", async function(event) {
-//         event.preventDefault(); // Prevent the default form submission behavior
+sendButton.addEventListener("click", async () => {
+    const userMessage = userInput.value;
+    if (userMessage.trim() === "") return;
 
-//         const message = userInput.value;
-//         if (message.trim() === "") return;
+    const userMessageElement = createMessageElement(userMessage, "user-message");
+    chatContainer.appendChild(userMessageElement);
+    userInput.value = "";
 
-//         appendMessage("You", message);
-//         userInput.value = "";
+    const botResponses = await sendMessageToRasa(userMessage);
+    for (const botResponse of botResponses) {
+        const botMessageElement = createMessageElement(botResponse.text, "bot-message");
+        chatContainer.appendChild(botMessageElement);
+    }
+});
 
-//         try {
-//             const response = await fetch("http://localhost:5005/webhooks/rest/webhook", {
-//                 method: "POST",
-//                 headers: {
-//                     "Content-Type": "application/json"
-//                 },
-//                 body: JSON.stringify({
-//                     sender: "Alvaro",
-//                     message: message
-//                 })
-//             });
+function createMessageElement(message, className) {
+    const messageElement = document.createElement("div");
+    messageElement.textContent = message;
+    messageElement.classList.add("message", className);
+    return messageElement;
+}
 
-//             console.log("Response status:", response); // Log the response status
-//         } catch (error) {
-//             console.error("Error sending message:", error);
-//         }
-//     });
+async function sendMessageToRasa(message) {
+    const url = "http://localhost:5005/webhooks/rest/webhook"; // Replace with your Rasa server URL
 
-//     function appendMessage(sender, message) {
-//         const messageElement = document.createElement("div");
-//         messageElement.classList.add("message");
-//         messageElement.textContent = `${sender}: ${message}`;
-//         chatMessages.appendChild(messageElement);
-//     }
-// });
+    const response = await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            sender: "user",
+            message: message
+        })
+    });
+
+    const jsonResponse = await response.json();
+    return jsonResponse; // An array of Rasa responses
+}
