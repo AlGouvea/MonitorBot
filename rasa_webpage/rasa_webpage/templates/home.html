@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    {% load static %}
 <head>
     <title>MonitBot</title>
 </head>
@@ -7,8 +8,11 @@
     <h1>Qual Sua Dúvida?</h1>
     <div id="chat-container">
         <div id="chat-messages"></div>
-        <input type="text" id="user-input" placeholder="Type a message...">
-        <button id="send-button">Send</button>
+        <form id="message-form">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button type="submit">Send</button>
+        </form>
     </div>
+    <script src="{%static 'scripts/chat.js' %}"></script>
 </body>
 </html>
