@@ -6,20 +6,20 @@ sendButton.addEventListener("click", async () => {
     const userMessage = userInput.value;
     if (userMessage.trim() === "") return;
 
-    const userMessageElement = createMessageElement(userMessage, "user-message");
+    const userMessageElement = createMessageElement(userMessage, "user-message", "You");
     chatContainer.appendChild(userMessageElement);
     userInput.value = "";
 
     const botResponses = await sendMessageToRasa(userMessage);
     for (const botResponse of botResponses) {
-        const botMessageElement = createMessageElement(botResponse.text, "bot-message");
+        const botMessageElement = createMessageElement(botResponse.text, "bot-message", "Bot");
         chatContainer.appendChild(botMessageElement);
     }
 });
 
-function createMessageElement(message, className) {
+function createMessageElement(message, className, sender) {
     const messageElement = document.createElement("div");
-    messageElement.textContent = message;
+    messageElement.textContent = `${sender}: ${message}`;
     messageElement.classList.add("message", className);
     return messageElement;
 }

@@ -1,15 +1,105 @@
 <!DOCTYPE html>
 <html>
+<style>
+    .full-container{
+        width: 300px;
+        height: 600px;
+        background-color: #FFFFFF;
+        margin-top: 5px;
+        margin-left: calc(50% - 150px);
+        align-items: center;
+        overflow-y: auto;
+    }
+
+    .container-border{
+        width: 310px;
+        height: 610px;
+        margin-top: 95px;
+        background: linear-gradient(to bottom, rgb(0, 255, 0), rgb(0, 190, 255));
+        margin-left: calc(50% - 150px);
+    }
+
+    .chat-container{
+        background-color: #FFFFFF;
+    }
+
+    .bot-message {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 1000;
+        color: white;
+        background-color: rgb(0, 150, 150);
+        border-radius: 15px;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 125px;
+        width: 150px;
+        padding: 10px;
+    }
+
+    .user-message{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 1000;
+        color: white;
+        background-color: rgb(0, 150, 0);
+        border-radius: 15px;
+        text-align: left;
+        margin-top: 10px;
+        margin-left: 5px;
+        width: 150px;
+        padding: 10px;
+    }
+
+    .message-container{
+        width: 300px;
+        height: 60px;
+        margin-left: calc(50% - 150px);
+        margin-top: 20px;
+        border: 2px solid rgb(0, 150, 0);
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .send-message{
+        border: none;
+        position: absolute;
+        margin-top: 5px;
+        margin-left: 3px;
+        width: 230px;
+        height: 52px;
+        border-radius: 16px;
+        outline: none;
+    }
+
+    button{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 1000;
+        border: none;
+        background-color: rgb(0, 150, 0);
+        color: white;
+        width: 50px;
+        height: 62px;
+        margin-left: 250px;
+        margin-top: -1px;
+        text-align: center;
+    }
+</style>
 <head>
     {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
 </head>
 <body>
-    <div class="chat-container">
-        <div class="message user-message">Hello, Rasa!</div>
+    <div class="container-border" style="position: absolute;">
+        <div class="full-container">
+            <div class="chat-container">
+                <div class="message bot-message" style="margin-top: -40px;"></div>
+                <div class="message user-message" style="margin-top: -20px; margin-bottom: 25px;"></div>
+            </div>
+        </div>
+        <div class="message-container">
+            <input class="send-message" id="user-input" placeholder="Type your message..."></input>
+            <button id="send-button">Send</button>
+        </div>
     </div>
-
-    <textarea id="user-input" placeholder="Type your message..."></textarea>
-    <button id="send-button">Send</button>
 
     <script src="{%static 'scripts/chat.js' %}"></script>
 </body>
