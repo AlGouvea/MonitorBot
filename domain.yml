@@ -8,6 +8,8 @@ intents:
 - greet
 - mood_great
 - mood_unhappy
+- ask_variable_basic
+- ask_set_variable
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -24,6 +26,12 @@ responses:
   - text: I am a bot, powered by Rasa.
   utter_help:
   - text: 'To define a loop in C use the following format: for (x = y; x < z; x++), where x is a variable, y the starting value and z the limit'
+  utter_ask_variable_basic:
+  - text: 'In C programming Language a variable is a quick way to reserve a certain space in the computer memory to be able to store and read data from.
+  Variables have different types, such as int, float, double and char.'
+  utter_ask_set_variable:
+  - text: 'In C programming language de definition of a variable uses the following format: <type> <name>; such as int x;
+  To assign a value to the variable it follow the format <name> = <value>; or <type> <name> = <value>; if it`s the initial definition of the variable'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

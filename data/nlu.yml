@@ -88,3 +88,15 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+- intent: ask_variable_basic
+  examples: |
+    - What's a variable in C programming Language?
+    - What's a variable?
+- intent: ask_set_variable
+  examples: |
+    - How do I set a variable in C?
+    - How do I set a variable?
+    - How do I set an int?
+    - How do I set a double?
+    - How do I set a float?
+    - How do I set a char?

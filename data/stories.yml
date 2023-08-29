@@ -45,3 +45,10 @@ stories:
   - intent: doubt
   - action: utter_help
   - action: utter_goodbye
+
+- story: ask_variables_begin
+  steps:
+  - intent: ask_variable_basic
+  - action: utter_ask_variable_basic
+  - intent: ask_set_variable
+  - action: utter_ask_set_variable
