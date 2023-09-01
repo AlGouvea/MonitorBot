@@ -88,15 +88,27 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-- intent: ask_variable_basic
-  examples: |
-    - What's a variable in C programming Language?
-    - What's a variable?
-- intent: ask_set_variable
-  examples: |
-    - How do I set a variable in C?
-    - How do I set a variable?
-    - How do I set an int?
-    - How do I set a double?
-    - How do I set a float?
-    - How do I set a char?
+  - intent: duvida_c_programacao_variaveis
+    examples: |
+      - How to declare a variable in C?
+      - Explain how to create a variable in C.
+      - What is the syntax for declaring a variable in C?
+      - Can you show an example of variable declaration in C?
+      - What are the data types I can use when declaring variables in C?
+
+  - intent: duvida_c_programacao_strings
+    examples: |
+      - How to declare a string in C?
+      - How do I store text in C?
+      - What is the syntax for declaring a string in C?
+
+  - intent: duvida_c_programacao_arrays
+    examples: |
+      - How to declare an array in C?
+      - Can you show me an example of an array in C?
+
+  - intent: duvida_c_programacao_loops
+    examples: |
+      - How to use a 'for' loop in C?
+      - Explain 'while' loops in C programming.
+      - What is the difference between 'for' and 'while' loops in C?

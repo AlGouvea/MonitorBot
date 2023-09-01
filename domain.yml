@@ -10,6 +10,10 @@ intents:
 - mood_unhappy
 - ask_variable_basic
 - ask_set_variable
+- duvida_c_programacao_loops
+- duvida_c_programacao_arrays
+- duvida_c_programacao_strings
+- duvida_c_programacao_variaveis
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -32,6 +36,30 @@ responses:
   utter_ask_set_variable:
   - text: 'In C programming language de definition of a variable uses the following format: <type> <name>; such as int x;
   To assign a value to the variable it follow the format <name> = <value>; or <type> <name> = <value>; if it`s the initial definition of the variable'
+  utter_duvida_c_programacao_loops:
+    - text: "Os loops em C, como 'for', 'while' e 'do-while', permitem que você execute um bloco de código repetidamente. Um exemplo de uso de um loop 'for' em C é: \n\n```
+            for (int i = 0; i < 5; i++) {
+                // Seu código aqui
+            }
+            ```"
+  utter_duvida_c_programacao_arrays:
+    - text: "Em C, você pode declarar um array usando a sintaxe:\n\n```
+            tipo_de_dado nome_do_array[tamanho];
+            ```\n\nPor exemplo, para declarar um array de inteiros com 5 elementos: \n\n```
+            int numeros[5];
+            ```"
+  utter_duvida_c_programacao_strings:
+    - text: "Strings em C são arrays de caracteres. Você pode concatenar strings usando a função `strcat()`. Aqui está um exemplo: \n\n```
+            char destino[50] = 'Olá, ';
+            char origem[] = 'mundo!';
+            strcat(destino, origem);
+            ```"
+  utter_duvida_c_programacao_variaveis:
+    - text: "Em C, para declarar uma variável, você especifica o tipo de dado seguido pelo nome da variável. Por exemplo, para declarar uma variável inteira chamada 'idade', você pode fazer:\n\n```
+            int idade;
+            ```"
+
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

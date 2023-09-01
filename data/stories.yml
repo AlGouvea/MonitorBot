@@ -52,3 +52,23 @@ stories:
   - action: utter_ask_variable_basic
   - intent: ask_set_variable
   - action: utter_ask_set_variable
+
+- story: duvida_c_programacao_loops
+  steps:
+    - intent: duvidaCProgramacaoLoops
+    - action: utter_duvida_c_programacao_loops
+
+- story: duvida_c_programacao_arrays
+  steps:
+    - intent: duvidaCProgramacaoArrays
+    - action: utter_duvida_c_programacao_arrays
+
+- story: UsuarioPerguntaSobreStringsEmC
+  steps:
+    - intent: duvida_c_programacao_strings
+    - action: utter_duvida_c_programacao_strings
+
+- story: UsuarioPerguntaSobreVariaveisEmC
+  steps:
+    - intent: duvida_c_programacao_variaveis
+    - action: utter_duvida_c_programacao_variaveis
