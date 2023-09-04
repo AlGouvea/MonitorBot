@@ -55,12 +55,12 @@ stories:
 
 - story: duvida_c_programacao_loops
   steps:
-    - intent: duvidaCProgramacaoLoops
+    - intent: duvida_c_programacao_loops
     - action: utter_duvida_c_programacao_loops
 
 - story: duvida_c_programacao_arrays
   steps:
-    - intent: duvidaCProgramacaoArrays
+    - intent: duvida_c_programacao_arrays
     - action: utter_duvida_c_programacao_arrays
 
 - story: UsuarioPerguntaSobreStringsEmC
