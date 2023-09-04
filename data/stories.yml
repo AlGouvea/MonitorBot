@@ -48,27 +48,42 @@ stories:
 
 - story: ask_variables_begin
   steps:
-  - intent: ask_variable_basic
-  - action: utter_ask_variable_basic
-  - intent: ask_set_variable
-  - action: utter_ask_set_variable
+  - intent: duvida_c_programacao_variaveis
+  - action: utter_duvida_c_programacao_variaveis
+  - intent: duvida_c_declaracao_variaveis
+  - action: utter_duvida_c_declaracao_variaveis
 
-- story: duvida_c_programacao_loops
+- story: ask_loop_for
   steps:
     - intent: duvida_c_programacao_loops
     - action: utter_duvida_c_programacao_loops
+    - intent: duvida_c_declaracao_for
+    - action: utter_duvida_c_declaracao_for
 
-- story: duvida_c_programacao_arrays
+- story: ask_loop_do
+  steps:
+    - intent: duvida_c_programacao_loops
+    - action: utter_duvida_c_programacao_loops
+    - intent: duvida_c_declaracao_do
+    - action: utter_duvida_c_declaracao_do
+
+- story: ask_loop_while
+  steps:
+    - intent: duvida_c_programacao_loops
+    - action: utter_duvida_c_programacao_loops
+    - intent: duvida_c_declaracao_while
+    - action: utter_duvida_c_declaracao_while
+
+- story: ask_arrays
   steps:
     - intent: duvida_c_programacao_arrays
     - action: utter_duvida_c_programacao_arrays
+    - intent: duvida_c_declaracao_arrays
+    - action: utter_duvida_c_declaracao_arrays
 
-- story: UsuarioPerguntaSobreStringsEmC
+- story: ask_strings
   steps:
     - intent: duvida_c_programacao_strings
     - action: utter_duvida_c_programacao_strings
-
-- story: UsuarioPerguntaSobreVariaveisEmC
-  steps:
-    - intent: duvida_c_programacao_variaveis
-    - action: utter_duvida_c_programacao_variaveis
+    - intent: duvida_c_declaracao_strings
+    - action: utter_duvida_c_declaracao_strings

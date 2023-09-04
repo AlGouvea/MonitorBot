@@ -8,57 +8,53 @@ intents:
 - greet
 - mood_great
 - mood_unhappy
-- ask_variable_basic
-- ask_set_variable
-- duvida_c_programacao_loops
-- duvida_c_programacao_arrays
-- duvida_c_programacao_strings
 - duvida_c_programacao_variaveis
+- duvida_c_declaracao_variaveis
+- duvida_c_programacao_loops
+- duvida_c_declaracao_for
+- duvida_c_declaracao_do
+- duvida_c_declaracao_while
+- duvida_c_programacao_arrays
+- duvida_c_declaracao_arrays
+- duvida_c_programacao_strings
+- duvida_c_declaracao_strings
+
 responses:
   utter_greet:
-  - text: Hey! How are you?
+  - text: Oi, tudo bom?
   utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
+  - text: 'Aqui algo pra te animar:'
     image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: Did that help you?
+  - text: Isso ajudou?
   utter_happy:
-  - text: Great, carry on!
+  - text: Ótimo!
   utter_goodbye:
-  - text: Bye
+  - text: Tchau
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: Eu sou um bot, desenvolvido com Rasa.
   utter_help:
-  - text: 'To define a loop in C use the following format: for (x = y; x < z; x++), where x is a variable, y the starting value and z the limit'
-  utter_ask_variable_basic:
-  - text: 'In C programming Language a variable is a quick way to reserve a certain space in the computer memory to be able to store and read data from.
-  Variables have different types, such as int, float, double and char.'
-  utter_ask_set_variable:
-  - text: 'In C programming language de definition of a variable uses the following format: <type> <name>; such as int x;
-  To assign a value to the variable it follow the format <name> = <value>; or <type> <name> = <value>; if it`s the initial definition of the variable'
-  utter_duvida_c_programacao_loops:
-    - text: "Os loops em C, como 'for', 'while' e 'do-while', permitem que você execute um bloco de código repetidamente. Um exemplo de uso de um loop 'for' em C é: \n\n```
-            for (int i = 0; i < 5; i++) {
-                // Seu código aqui
-            }
-            ```"
-  utter_duvida_c_programacao_arrays:
-    - text: "Em C, você pode declarar um array usando a sintaxe:\n\n```
-            tipo_de_dado nome_do_array[tamanho];
-            ```\n\nPor exemplo, para declarar um array de inteiros com 5 elementos: \n\n```
-            int numeros[5];
-            ```"
-  utter_duvida_c_programacao_strings:
-    - text: "Strings em C são arrays de caracteres. Você pode concatenar strings usando a função `strcat()`. Aqui está um exemplo: \n\n```
-            char destino[50] = 'Olá, ';
-            char origem[] = 'mundo!';
-            strcat(destino, origem);
-            ```"
+  - text: 'Caso tenha alguma dúvida sobre minha capacidade de responder essa pergunta vá ao repositório desse projeto.'
   utter_duvida_c_programacao_variaveis:
-    - text: "Em C, para declarar uma variável, você especifica o tipo de dado seguido pelo nome da variável. Por exemplo, para declarar uma variável inteira chamada 'idade', você pode fazer:\n\n```
-            int idade;
-            ```"
-
+  - text: 'Variáveis na linguagem C são espaços de memória reservados para armazenar dados, como números, texto ou qualquer outro tipo de informação utilizada em um programa. Elas são identificadas por um nome único e podem conter diferentes tipos de valores, como inteiros, números de ponto flutuante, caracteres e muito mais.\nAo declarar uma variável em C, você precisa especificar seu tipo, que determina o tamanho da memória alocada e a forma como os dados são interpretados. Por exemplo, um int é usado para armazenar números inteiros, enquanto um float é usado para números de ponto flutuante.'
+  utter_duvida_c_declaracao_variaveis:
+   - text: 'Em C, você precisa declarar uma variável antes de usá-la, especificando o tipo de dado que ela irá armazenar. Isso ajuda o compilador a alocar a quantidade correta de memória para a variável. Por exemplo, você pode declarar uma variável inteira (int) para armazenar números inteiros ou uma variável de ponto flutuante (float) para números decimais.'
+  utter_duvida_c_programacao_loops:
+    - text: 'Em C, loops são estruturas de controle que permitem que um conjunto de instruções seja executado repetidamente enquanto uma condição específica for verdadeira. Existem três tipos principais de loops em C: o "for" loop, o "while" loop e o "do-while" loop.'
+  utter_duvida_c_declaracao_for:
+    - text: 'Para declarar um loop for em C, você pode seguir a seguinte sintaxe:\n\nfor (inicialização; condição; incremento) {\n// Corpo do loop\n}\n\n'
+  utter_duvida_c_declaracao_do:
+    - text: 'Para declarar um loop do em C, você pode seguir a seguinte sintaxe:\n\do{\n// Corpo do loop\n}while(condição)ç\n\n'
+  utter_duvida_c_declaracao_while:
+    - text: 'Para declarar um loop for em C, você pode seguir a seguinte sintaxe:\n\while(condição){\n// Corpo do loop\n}\n\n'
+  utter_duvida_c_programacao_arrays:
+    - text: 'Em C, vetores são estruturas de dados que permitem armazenar coleções de elementos do mesmo tipo em uma sequência contígua de memória. Cada elemento em um vetor é acessado por um índice inteiro, começando geralmente do zero. '
+  utter_duvida_c_declaracao_arrays:
+    - text: 'Em C, para declarar um vetor (array) você pode usar o seguinte formato <tipo do dado> <nome do vetor>[tamanho].\n\n Por exemplo:\nint vetor_a[15];'
+  utter_duvida_c_programacao_strings:
+    - text: 'Em C, strings são sequências de caracteres representadas como arrays de caracteres terminados por um caractere nulo \0. O caractere nulo indica o fim da string, permitindo que funções e operações saibam onde a string termina. É importante lembrar que as strings em C são arrays de caracteres e requerem cuidado para evitar estouro de buffer e acesso indevido à memória.'
+  utter_duvida_c_declaracao_strings:
+    - text: 'Para declarar uma string em C, você pode usar a seguinte sintaxe:\n\nchar nome_da_string[tamanho]; Tendo em vista que uma string se resume a um vetor de caracteres.'
 
 session_config:
   session_expiration_time: 60

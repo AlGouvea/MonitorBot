@@ -3,109 +3,116 @@ nlu:
 - intent: greet
   examples: |
     - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - Hello
+    - oi
+    - oie
+    - olá
+    - bom dia
+    - boa tarde
+    - dia
+    - opa
+    - tudo bom
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - tchau
+    - flw
+    - vlw
+    - boa noite
+    - até mais
+    - adeus
+    - tenha um bom dia
+    - inté
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - sim
+    - s
+    - aham
+    - claro
+    - okay
+    - isso
+    - Parece certo
 - intent: deny
   examples: |
-    - no
+    - não
     - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - nunca
+    - acho que não
+    - não curti
+    - nope
+    - não mesmo
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - perfeito
+    - ótimo
+    - incrível
+    - maravilhoso
+    - sem defeitos
 - intent: doubt
   examples: |
-    - how do I make a loop in C?
-    - how do I declare a variable in C?
-    - How do I make a loop in C?
+    - Você tem certeza?
+    - Eu não acredito em, você
+    - Me parece errado
+    - Não me parece certo
+- intent: mood_unhappy
+  examples: |
+    - meu dia ta péssimo
+    - to triste
+    - não to feliz
+    - to bolado
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Você é um bot?
+    - Você é humano?
+    - Estou falando com um bot?
+    - Estou falando com uma pessoa?
 - intent: duvida_c_programacao_variaveis
   examples: |
-      - How to declare a variable in C?
-      - Explain how to create a variable in C.
-      - What is the syntax for declaring a variable in C?
-      - Can you show an example of variable declaration in C?
-      - What are the data types I can use when declaring variables in C?
+    - O que são variaveis?
+    - Para que servem variaveis em C?
+    - Quais os tipos de variaveis em C?
+- intent: duvida_c_declaracao_variaveis
+  examples: |
+    - Como to declarar um variável em C?
+    - Explique como criar uma variável em C.
+    - Qual a sintaxe para declarar uma variável em C?
+    - pode me mostrar um exemplo de declaração de variável em C?
 - intent: duvida_c_programacao_strings
   examples: |
-      - How to declare a string in C?
-      - How do I store text in C?
-      - What is the syntax for declaring a string in C?
+    - O que são strings?
+    - Como eu armazeno texto em C?
+    - Qual a sintaxe para declarar uma string em C?
+- intent: duvida_c_declaracao_strings
+  examples: |
+    - Como declarar uma string em C?
+    - Como eu declaro uma variavel de texto em C?
+    - Qual a sintaxe para declarar uma string em C?
 - intent: duvida_c_programacao_arrays
   examples: |
-      - How to declare an array in C?
-      - Can you show me an example of an array in C?
+    - O que é um vetor?
+    - Como armazenar vários valores na mesma variavel?
+- intent: duvida_c_declaracao_arrays
+  examples: |
+    - Como declarar um vetor em C?
+    - Pode me mostrar um exemplo de vetor em C?
 - intent: duvida_c_programacao_loops
   examples: |
-      - How to use a 'for' loop in C?
-      - Explain 'while' loops in C programming.
-      - What is the difference between 'for' and 'while' loops in C?
+    - O que são loops em C?
+    - Para que servem loops?
+    - Quais os tipos de loops?
+- intent: duvida_c_declaracao_for
+  examples: |
+    - como funciona um loop for?
+    - como eu declaro um for?
+    - como fazer um loop for?
+- intent: duvida_c_declaracao_do
+  examples: |
+    - como funciona um loop do while?
+    - como eu declaro um do while?
+    - como fazer um loop do while?
+    - como funciona um loop do?
+    - como eu declaro um do?
+    - como fazer um loop do?
+- intent: duvida_c_declaracao_while
+  examples: |
+    - como funciona um loop while?
+    - como eu declaro um while?
+    - como fazer um loop while?
